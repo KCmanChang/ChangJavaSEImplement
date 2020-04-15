@@ -3,11 +3,11 @@ package tw.kc.chang.apps.javase.implement;
 public class Implement20ShufflePoker {
 
 	public static void main(String[] args) {
+		long now = System.currentTimeMillis();
 		// 洗牌
 		int[] poker = new int[52];
-//		for(int i = 0; i<poker.length; i++) {
-//			poker[i] = i;
-//		}
+		// for(int i = 0; i<poker.length; i++) poker[i] = i;
+		
 		for (int i = 0; i < poker.length; i++) {
 			int rand = (int) (Math.random() * 52); // 0 - 51
 			// 檢查機制，不重複
@@ -26,7 +26,7 @@ public class Implement20ShufflePoker {
 				i--;
 			}
 		}
-
+		System.out.println(System.currentTimeMillis() - now);
 	}
 
 }
