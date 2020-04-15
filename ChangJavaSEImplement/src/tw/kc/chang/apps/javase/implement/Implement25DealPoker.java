@@ -25,6 +25,7 @@ public class Implement25DealPoker {
 			players[i % 4][i / 4] = poker[i];
 		}
 		
+		char[] suit2s = {'\u2660', '\u2665', '\u2665', '\u2663'};
 		String[] suits = {"黑桃", "紅心", "方塊", "梅花"};
 		String[] values = {"A ", "2 ", "3 ", "4 ", "5 ", "6 ",
 				"7 ", "8 ", "9 ", "10 ", "J ", "Q ", "K "};
@@ -32,7 +33,7 @@ public class Implement25DealPoker {
 		for (int[] player : players) {
 			Arrays.sort(player);
 			for (int card : player) {
-				System.out.print(suits[card/13] +
+				System.out.print(suit2s[card/13] +
 						values[card%13] + " ");
 			}
 			System.out.println();
