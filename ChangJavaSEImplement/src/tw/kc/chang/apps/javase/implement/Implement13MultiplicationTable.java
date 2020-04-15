@@ -3,10 +3,14 @@ package tw.kc.chang.apps.javase.implement;
 public class Implement13MultiplicationTable {
 
 	public static void main(String[] args) {
-		for (int k = 0; k < 2; k++) {
+		int row = 2;
+		int start = 2;
+		int col = 4;
+		
+		for (int k = 0; k < row; k++) {
 			for (int j = 1; j <= 9; j++) {
-				for (int i = 2; i <= 5; i++) {
-					int newi = i + k * 4;
+				for (int i = start; i < start + col; i++) {
+					int newi = i + k * col;
 					int r = newi * j;
 					System.out.printf("%d x %d = %d\t", newi, j, r);
 				}
@@ -15,5 +19,4 @@ public class Implement13MultiplicationTable {
 			System.out.println("=========");
 		}
 	}
-
 }
