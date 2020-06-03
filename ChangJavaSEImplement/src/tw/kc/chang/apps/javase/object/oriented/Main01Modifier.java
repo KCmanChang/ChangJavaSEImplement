@@ -1,7 +1,7 @@
 package tw.kc.chang.apps.javase.object.oriented;
 
-import tw.kc.chang.apps.javase.object.tool.Tool01Bike;
-import tw.kc.chang.apps.javase.object.tool.Tool02Scooter;
+import tw.kc.chang.apps.javase.object.tool.Tool01ModifierBike;
+import tw.kc.chang.apps.javase.object.tool.Tool02ModifierScooter;
 
 // use Tool01Bike.java
 // use Tool02Scooter.java
@@ -14,8 +14,8 @@ public class Main01Modifier {
 	// public：所有都可以使用
 
 	public static void main(String[] args) {
-		Tool01Bike b1 = new Tool01Bike();
-		Tool01Bike b2 = new Tool01Bike();
+		Tool01ModifierBike b1 = new Tool01ModifierBike();
+		Tool01ModifierBike b2 = new Tool01ModifierBike();
 		// System.out.println(b1.getSpeed());
 		b1.upSpeed();
 		b1.upSpeed();
@@ -30,10 +30,10 @@ public class Main01Modifier {
 		b2.downSpeed();
 		// System.out.println(b2.getSpeed());
 		
-		Tool02Scooter s1 = new Tool02Scooter();
-		s1.setGear(4);
-		s1.upSpeed();
-		s1.upSpeed();
+		Tool02ModifierScooter s1 = new Tool02ModifierScooter();
+		// s1.setGear(4);
+		s1.upSpeed(1);
+		s1.upSpeed(2);
 		s1.downSpeed();
 		System.out.println(s1.getSpeed());
 		
